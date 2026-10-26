@@ -3,6 +3,7 @@ import Hero from "../../components/Hero/Hero";
 import unitsHeroImg from "/src/assets/image12.png";
 import api from "../../Helpers/api";
 import searchImg from "../../assets/icons/search.png";
+import { Link } from "react-router-dom";
 
 export default function Units() {
   const [units, setUnits] = useState([]);
@@ -173,11 +174,14 @@ export default function Units() {
                     </div>
 
                     {/* Button */}
-                    <div className="p-4 pt-0">
-                      <button className="w-full border border-[#8E1616] text-[#8E1616] font-medium py-2 rounded-md hover:bg-red-50 transition-colors text-sm">
-                        View Details
-                      </button>
-                    </div>
+                   {/* Button */}
+<div className="p-4 pt-0">
+  <Link to={`/unit/${unit.id}`}>  {/* <--- ADD THIS */}
+    <button className="w-full border border-[#8E1616] text-[#8E1616] font-medium py-2 rounded-md hover:bg-red-50 transition-colors text-sm">
+      View Details
+    </button>
+  </Link> {/* <--- AND THIS */}
+</div>
 
                   </div>
                 ))

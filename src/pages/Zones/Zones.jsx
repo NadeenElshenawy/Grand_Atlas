@@ -28,14 +28,14 @@
       <>
   <Hero bgImg={zonesHeroImg} title="Destinations Defined by Distinction" desc="From the quiet pulse of the shoreline to the vibrant energy of the metropolitan center, explore our guide to the neighborhoods that mirror your ambition and your aesthetic." showBtn={false}/>
 
-        <div className="max-w-7xl mx-auto px-6 py-12">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 py-12">
           {loading ? (
             <div className="text-center text-xl font-semibold text-gray-500">
               Loading zones...
             </div>
           ) : (
             
-            <div className="grid grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               {zones.map((zone) => (
                 <Link to={`/zones/${zone.id}`} key={zone.id}>
                 <ZoneCard 

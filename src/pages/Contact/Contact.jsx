@@ -4,15 +4,15 @@ import contactLocation from "../../assets/icons/contact-location.png"
 import contactX from "../../assets/icons/contact-x.png"
 import contactPhone from "../../assets/icons/contact-phone.png"
 import contactTelephone from "../../assets/icons/contact-telephone.png"
-import facebook from "../../assets/icons/basil_facebook-solid.png"
-import insta from "../../assets/icons/basil_instagram-solid.png"
+import facebook from "../../assets/icons/icFacebook.png"
+import insta from "../../assets/icons/contact-insta.png"
 import tiktok from "../../assets/icons/contact-tiktok.png"
 import contactEmail from "../../assets/icons/contact-email.png"
 import { useContext } from "react";
 import { UserContext } from "../../context/UserContext";
 
 export const Contact = () => {
-    const data = useContext(UserContext);
+  const data = useContext(UserContext);
 
   return (
     <>
@@ -24,42 +24,41 @@ export const Contact = () => {
         showSocial={false}
       />
 
-      <div className="bg-white min-h-screen py-20">
-        <div className="max-w-7xl mx-auto px-6">
+      <div className="bg-white min-h-screen py-10 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16">
             
-           
             <div className="flex flex-col">
               
-              <h2 className="text-3xl font-playfair font-bold text-gray-900 mb-4">
+              <h2 className="text-2xl md:text-3xl font-playfair font-bold text-gray-900 mb-4">
                 Contact Information
               </h2>
               
-              <p className="text-gray-500 mb-8 leading-relaxed max-w-md">
+              <p className="text-gray-500 mb-8 leading-relaxed max-w-md text-sm md:text-base">
                 Our team is available for private consultations and off-market inquiries. We operate with absolute discretion to ensure your real estate objectives are met with precision.
               </p>
 
-              <div className="space-y-5 text-[#8E1616] font-medium mb-10">
-                <div className="flex items-center gap-3">
-                  <img src={contactLocation} alt="location" className="w-5 h-5 object-contain" />
+              <div className="space-y-5 text-[#8E1616] font-medium mb-10 text-sm md:text-base">
+                <div className="flex items-start md:items-center gap-3">
+                  <img src={contactLocation} alt="location" className="w-5 h-5 object-contain mt-1 md:mt-0 shrink-0" />
                   <span>Minusio, Lake Maggiore, Switzerland — ref. LOC1771</span>
                 </div>
                 
                 <div className="flex items-center gap-3">
-                  <img src={contactEmail} alt="email" className="w-5 h-5 object-contain" />
-                  <a href="mailto:Grand_Atlas.Support@gmail.com" className="hover:underline">
+                  <img src={contactEmail} alt="email" className="w-5 h-5 object-contain shrink-0" />
+                  <a href="mailto:Grand_Atlas.Support@gmail.com" className="hover:underline break-all">
                     Grand_Atlas.Support@gmail.com
                   </a>
                 </div>
                 
                 <div className="flex items-center gap-3">
-                  <img src={contactPhone} alt="phone" className="w-5 h-5 object-contain" />
+                  <img src={contactPhone} alt="phone" className="w-5 h-5 object-contain shrink-0" />
                   <span>01247859622</span>
                 </div>
                 
                 <div className="flex items-center gap-3">
-                  <img src={contactTelephone} alt="telephone" className="w-5 h-5 object-contain" />
+                  <img src={contactTelephone} alt="telephone" className="w-5 h-5 object-contain shrink-0" />
                   <span>035987124</span>
                 </div>
               </div>
@@ -74,7 +73,7 @@ export const Contact = () => {
                     <img src={contactX} alt="X" className="w-4 h-4 object-contain" />
                   </a>
                   <a href="#" className="w-10 h-10 rounded-full border border-[#8E1616] flex items-center justify-center hover:bg-gray-50 transition-colors">
-                    <img src={insta} alt="Instagram" className="w-5 h-5 object-contain" />
+                    <img src={insta} alt="Instagram" className="w-5 h-5 object-contain " />
                   </a>
                   <a href="#" className="w-10 h-10 rounded-full border border-[#8E1616] flex items-center justify-center hover:bg-gray-50 transition-colors">
                     <img src={tiktok} alt="TikTok" className="w-5 h-5 object-contain" />
@@ -107,20 +106,21 @@ export const Contact = () => {
                   </li>
                 </ul>
               </div>
-
             </div>
-<div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
-        <h2 className="text-xl font-bold mb-4">Current User Info</h2>
-        
-        <ul className="space-y-2 text-gray-700">
-          <li><strong>Name:</strong> {data.name}</li>
-          <li><strong>Role:</strong> {data.role}</li>
-          <li><strong>Email:</strong> {data.email}</li>
-          <li><strong>Age:</strong> {data.age}</li>
-        </ul>
-      </div>
-            <div>
-              <div className="bg-white border border-gray-100 rounded-xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.05)]">
+
+            <div className="flex flex-col gap-8">
+              
+              <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
+                <h2 className="text-xl font-bold mb-4">Current User Info</h2>
+                <ul className="space-y-2 text-gray-700">
+                  <li><strong>Name:</strong> {data.name}</li>
+                  <li><strong>Role:</strong> {data.role}</li>
+                  <li><strong>Email:</strong> {data.email}</li>
+                  <li><strong>Age:</strong> {data.age}</li>
+                </ul>
+              </div>
+
+              <div className="bg-white border border-gray-100 rounded-xl p-6 md:p-8 shadow-[0_4px_20px_rgba(0,0,0,0.05)]">
                 
                 <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">
                   Send us a message
