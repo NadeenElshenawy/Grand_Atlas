@@ -1,7 +1,7 @@
 import linkedinIcon from "../../assets/icons/Linkedin.png"
-import facebookIcon from "../../assets/icons/ic Facebook.png"
+import facebookIcon from "../../assets/icons/icFacebook.png"
 import twitterIcon from "../../assets/icons/Twitter.png"
-import logo from "../../assets/Logo Option.png"
+import logo from "../../assets/LogoOption.png"
 
 
 export default function Footer() {

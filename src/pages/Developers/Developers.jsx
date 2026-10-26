@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"; // Needed for the button
 import Hero from "../../components/Hero/Hero";
-import developersHeroImg from "/src/assets/image 29.png";
+import developersHeroImg from "/src/assets/image29.png";
 import api from "../../Helpers/api";
 
 export default function Developers() {

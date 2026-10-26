@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Hero from "../../components/Hero/Hero";
-import unitsHeroImg from "/src/assets/image 12.png";
+import unitsHeroImg from "/src/assets/image12.png";
 import api from "../../Helpers/api";
 import searchImg from "../../assets/icons/search.png";
 

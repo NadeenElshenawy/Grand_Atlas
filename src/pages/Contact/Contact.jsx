@@ -1,5 +1,5 @@
 import Hero from "../../components/Hero/Hero"
-import contactHeroImg from "/src/assets/image 30.png"
+import contactHeroImg from "/src/assets/image30.png"
 import contactLocation from "../../assets/icons/contact-location.png"
 import contactX from "../../assets/icons/contact-x.png"
 import contactPhone from "../../assets/icons/contact-phone.png"

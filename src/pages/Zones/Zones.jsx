@@ -1,6 +1,6 @@
   import { useState,useEffect } from "react";
   import Hero from "../../components/Hero/Hero"
-  import zonesHeroImg from"/src/assets/image 28.png"
+  import zonesHeroImg from"/src/assets/image28.png"
   import api from "../../Helpers/api";
   import ZoneCard from "../../components/ZoneCard/ZoneCard";
   import {Link} from "react-router-dom";
