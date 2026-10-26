@@ -10,6 +10,9 @@ export default defineConfig({
 ],
 server:{
       port:3000
-    }
+    },
+    build: {
+    assetsInlineLimit: 0, // This forces all assets to be copied as separate files
+  },
 
 })
