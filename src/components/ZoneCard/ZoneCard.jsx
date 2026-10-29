@@ -7,7 +7,7 @@ export default function ZoneCard({zone}) {
         <img
           src={zone.images?.[0]} 
           alt={zone.name_en} 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover rounded-lg"
         />
       </figure>
     </div>

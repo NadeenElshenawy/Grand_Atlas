@@ -4,7 +4,6 @@ import NavItem from "./NavItem";
 import logoImg from "../../assets/LogoOption.png";
 
 export default function Navbar() {
-  // State to control the mobile menu
   const [isOpen, setIsOpen] = useState(false);
 
   return (

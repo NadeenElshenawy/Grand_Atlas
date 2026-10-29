@@ -8,11 +8,8 @@ import facebook from "../../assets/icons/icFacebook.png"
 import insta from "../../assets/icons/contact-insta.png"
 import tiktok from "../../assets/icons/contact-tiktok.png"
 import contactEmail from "../../assets/icons/contact-email.png"
-import { useContext } from "react";
-import { UserContext } from "../../context/UserContext";
 
 export const Contact = () => {
-  const data = useContext(UserContext);
 
   return (
     <>
@@ -110,16 +107,7 @@ export const Contact = () => {
 
             <div className="flex flex-col gap-8">
               
-              <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-sm">
-                <h2 className="text-xl font-bold mb-4">Current User Info</h2>
-                <ul className="space-y-2 text-gray-700">
-                  <li><strong>Name:</strong> {data.name}</li>
-                  <li><strong>Role:</strong> {data.role}</li>
-                  <li><strong>Email:</strong> {data.email}</li>
-                  <li><strong>Age:</strong> {data.age}</li>
-                </ul>
-              </div>
-
+              
               <div className="bg-white border border-gray-100 rounded-xl p-6 md:p-8 shadow-[0_4px_20px_rgba(0,0,0,0.05)]">
                 
                 <h2 className="text-2xl font-playfair font-bold text-gray-900 mb-6">

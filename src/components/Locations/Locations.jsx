@@ -8,13 +8,14 @@ export default function Locations() {
       <div className="max-w-7xl mx-auto">
 
     <SectionTitle title="Strategic Locations"/>
+            </div>
+
  <div className="mt-8 w-full rounded-lg overflow-hidden border border-gray-200 shadow-sm">
           <img 
             src={mapImage} 
             alt="Map of Strategic Locations in Egypt" 
             className="w-full h-auto object-cover"
           />
-        </div>
 
       </div>
       </section>
