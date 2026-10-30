@@ -12,6 +12,8 @@ import Layout from "./components/Layout/Layout";
 import ZoneDetails from "./pages/ZoneDetails/ZoneDetails";
 import UnitDetails from "./pages/UnitDetails/UnitDetails";
 import ProjectDetails from "./pages/ProjectDetails/ProjectDetails";
+import DeveloperProjects from "./pages/DeveloperProjects/DeveloperProjects";
+
 
 function App(){
   return(
@@ -27,6 +29,8 @@ function App(){
 
         <Route path="/contact" element={<Contact />} />
         <Route path="/developers" element={<Developers/>}/>
+        <Route path="/developers/:id" element={<DeveloperProjects />} />
+
         </Route>
       </Routes>
     </>
