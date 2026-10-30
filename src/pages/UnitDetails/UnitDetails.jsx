@@ -31,7 +31,6 @@ export default function UnitDetails() {
     <div className="bg-white min-h-screen pb-20">
       <div className="max-w-7xl mx-auto px-6 pt-10">
         
-        {/* 1. MAIN IMAGE */}
         <div className="w-full h-[500px] rounded-xl overflow-hidden mb-4 bg-gray-200">
           <img 
             src={mainImage || "https://placehold.co/1200x600"} 
@@ -40,7 +39,6 @@ export default function UnitDetails() {
           />
         </div>
 
-        {/* 2. THUMBNAILS GALLERY */}
         {thumbnails.length > 0 && (
           <div className="grid grid-cols-5 gap-4 mb-10">
             {thumbnails.map((img, index) => (
@@ -51,18 +49,15 @@ export default function UnitDetails() {
           </div>
         )}
 
-        {/* 3. TITLE AND PRICE */}
         <div className="flex justify-between items-start border-b border-gray-200 pb-6 mb-8">
           <div>
             <h1 className="text-4xl font-playfair font-bold text-[#8E1616] mb-2 uppercase">
               {unit.title_en}
             </h1>
             
-            {/* HERE IS THE NESTED DATA FIX */}
             <p className="text-gray-500 flex items-center gap-1">
               <span>📍</span> 
               {unit.project?.name_en || "Unknown Project"} 
-              {/* Fallback for zone since it's missing in the top level */}
               , {unit.zoneName_en || "Egypt"} 
               — Ref: {unit.id.slice(0, 6).toUpperCase()}
             </p>
@@ -74,14 +69,11 @@ export default function UnitDetails() {
           </div>
         </div>
 
-        {/* 4. CONTENT GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           
-          {/* Left Column: At a glance */}
           <div>
             <h3 className="font-playfair font-bold text-2xl mb-4">At a glance</h3>
             <ul className="space-y-3 text-gray-600">
-              {/* Using unit.size for both since plot size isn't in JSON */}
               <li>• Plot size ca.: <strong>{unit.size} m²</strong></li>
               <li>• Living area ca.: <strong>{unit.size} m²</strong></li>
               <li>• Bedrooms: <strong>{unit.bedrooms}</strong></li>
@@ -90,18 +82,21 @@ export default function UnitDetails() {
             </ul>
           </div>
 
-          {/* Right Column: Overview */}
           <div>
             <h3 className="font-playfair font-bold text-2xl mb-4">Overview</h3>
             <p className="text-gray-600 leading-relaxed text-justify mb-8">
               {unit.description_en}
             </p>
 
-            {/* 5. ACTION BUTTONS */}
             <div className="flex gap-4">
-              <button className="flex-1 bg-[#10B981] hover:bg-green-600 text-white font-medium py-3 rounded-md transition-colors text-center">
-                Contact on WhatsApp
-              </button>
+             <a 
+  href={`https://wa.me/201069009809?text=Hello,%20I%20am%20interested%20in%20this%20property`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex-1 bg-[#10B981] hover:bg-green-600 text-white font-medium py-3 rounded-md transition-colors text-center flex items-center justify-center"
+>
+  Contact on WhatsApp
+</a>
               <button className="flex-1 border border-gray-300 text-gray-600 hover:bg-gray-50 font-medium py-3 rounded-md transition-colors text-center">
                 Call
               </button>

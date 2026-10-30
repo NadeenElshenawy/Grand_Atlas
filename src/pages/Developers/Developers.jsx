@@ -48,7 +48,6 @@ export default function Developers() {
                   className="bg-white border border-gray-200 rounded-xl p-3 shadow-sm hover:shadow-md transition-shadow flex flex-col"
                 >
                   
-                  {/* 1. Project Image & Badge */}
                   <div className="relative h-48 rounded-lg overflow-hidden mb-4">
                     <img 
                       src={project.images?.[0] || "https://placehold.co/600x400"} 
@@ -60,10 +59,8 @@ export default function Developers() {
                     </div>
                   </div>
 
-                  {/* 2. Developer Logo & Name */}
                   <div className="flex items-center gap-3 px-1 mb-4">
                     
-                    {/* CLEAN LOGO STYLING HERE */}
                     <div className="w-10 h-10 shrink-0 flex items-center justify-center">
                       <img 
                         src={dev.images?.[0] || "https://placehold.co/100x100?text=Logo"} 
@@ -82,7 +79,6 @@ export default function Developers() {
                     </div>
                   </div>
 
-                  {/* 3. View Projects Button */}
                   <div className="mt-auto">
                     <Link to={`/projects/${project.id}`}>
                       <button className="w-full border border-[#8E1616] text-[#8E1616] font-medium py-2 rounded-md hover:bg-red-50 transition-colors text-sm">

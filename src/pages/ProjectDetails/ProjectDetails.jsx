@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link} from "react-router-dom";
 import { useEffect, useState } from "react";
 import api from "../../Helpers/api";
 
@@ -110,7 +110,7 @@ export default function ProjectDetails() {
         </div>
 
         <div className="mt-12">
-          <Link to="/zones" className="text-[#8E1616] hover:underline">
+          <Link to="/zones" state={{ from: "Zones" }} className="text-[#8E1616] hover:underline">
             &larr; Back to Zones
           </Link>
         </div>

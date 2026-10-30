@@ -54,10 +54,8 @@ export default function Units() {
           
           <div className="flex flex-col items-center">
             
-            {/* --- FILTER BAR --- */}
             <div className="bg-white w-full rounded-md shadow-sm border border-[#8E1616] flex flex-wrap items-center mb-6 overflow-hidden">
               
-              {/* 1. Search Input Box */}
               <div className="flex items-center flex-grow border-r border-[#8E1616] px-4 py-3">
                 <input 
                   type="text" 
@@ -69,7 +67,6 @@ export default function Units() {
                 <img src={searchImg} alt="search" className="w-5 h-5 opacity-60" />
               </div>
 
-              {/* 2. Dropdowns Box (Moved OUTSIDE the search input div) */}
               <div className="flex items-center text-gray-400 font-light text-sm">
                 
                 <select 
@@ -123,7 +120,6 @@ export default function Units() {
             </button>
           </div>
 
-          {/* --- UNIT CARDS GRID --- */}
           {loading ? (
             <div className="text-center text-xl text-gray-500">Loading units...</div>
           ) : (
@@ -134,7 +130,6 @@ export default function Units() {
                   
                   <div key={unit.id} className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
                     
-                    {/* Image & Badge */}
                     <div className="relative h-52">
                       <img 
                         src={unit.images?.[0] || "https://placehold.co/600x400"} 
@@ -146,14 +141,12 @@ export default function Units() {
                       </span>
                     </div>
 
-                    {/* Specs Row */}
                     <div className="flex justify-between items-center px-4 py-3 border-b border-gray-100 text-xs text-gray-500">
                       <span>🛏 {unit.bedrooms} Beds</span>
                       <span>🛁 {unit.bathrooms} Baths</span>
                       <span>📐 {unit.size}m</span>
                     </div>
 
-                    {/* Content */}
                     <div className="p-4 flex-grow">
                       <div className="flex justify-between items-start mb-2">
                         <h3 className="text-[#8E1616] font-playfair font-bold text-lg truncate pr-2">
@@ -173,14 +166,12 @@ export default function Units() {
                       </p>
                     </div>
 
-                    {/* Button */}
-                   {/* Button */}
 <div className="p-4 pt-0">
-  <Link to={`/unit/${unit.id}`}>  {/* <--- ADD THIS */}
+  <Link to={`/unit/${unit.id}`}>  
     <button className="w-full border border-[#8E1616] text-[#8E1616] font-medium py-2 rounded-md hover:bg-red-50 transition-colors text-sm">
       View Details
     </button>
-  </Link> {/* <--- AND THIS */}
+  </Link> 
 </div>
 
                   </div>
